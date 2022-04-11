@@ -1,9 +1,11 @@
+
 :root {
-  --titleColor: #ec4b9e;
-  --textColor: #f3d8d9;
-  --backgroundcolor: #380d35;
-  --elementColorHighlight: #c288da;
-  --elementColorBackground: #794bb0;
+  --titleColor: #f7f9de;
+  --textColor: #dfe5a4;
+  --backgroundcolor: #548d05;
+  --elementColorHighlight: #e7c691;
+  --elementColorBackground: #cc6cff;
+  --navTextColor: #fcfddf;
   --borderWidth: 0.2vw;
   --borderRadius: 1vw;
 }
@@ -31,21 +33,21 @@ body {
 }
 
 .navText {
-  color: var(--textColor);
+  color: var(--navTextColor);
   background-color: var(--elementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
-  padding: .5rem;
-  margin-right:1em;
+  padding: 0.5rem;
+  margin-right: 1em;
   cursor: pointer;
 }
 
 #violet {
-  color: var(--textColor);
-  background-color: var(--elementColorBackground);
+  color: var(--navTextColor)
+;  background-color: var(--elementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
-  padding: .5rem;
+  padding: 0.5rem;
   margin-right: auto;
   margin-left: 1em;
 }
@@ -67,11 +69,19 @@ body {
   color: rgb(255, 166, 0);
 }
 
-
 .title {
   color: var(--titleColor);
 }
 
 .paragraph {
   color: var(--textColor);
+}
+
+.light-theme {
+  --primary-color: #007bff;
+  --disabled-color: #6c757d;
+}
+.dark-theme {
+  --primary-color: #000000;
+  --disabled-color: #4a4a4b;
 }

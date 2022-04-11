@@ -19,7 +19,7 @@ function Navbar() {
     if (event.target.id === "violet") {
       event.target.style.color = "#FF9AEC";
     } else {
-      event.target.style.color = "#380d35";
+      event.target.style.color = "white";
     }
   }
 
@@ -57,6 +57,9 @@ function Navbar() {
         </h3>
         <h3
           className="navText"
+          onClick={() => {
+            navigation('/CSS')
+          }}
           onMouseEnter={(event) => {
             mouseEnterHandler(event);
           }}
@@ -64,7 +67,7 @@ function Navbar() {
             mouseLeaveHandler(event);
           }}
         >
-          GAMES
+          CSS SANDBOX
         </h3>
         <h3
           className="navText"
