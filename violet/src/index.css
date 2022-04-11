@@ -1,9 +1,11 @@
 :root {
-  --backgroundcolor: #15341c;
-  --borderWidth: .2vw;
-  --elementColor: #0fa872;
-  --textColor: #cad7cd;
-  --borderRadius: 1vw
+  --titleColor: #ec4b9e;
+  --textColor: #f3d8d9;
+  --backgroundcolor: #380d35;
+  --elementColorHighlight: #c288da;
+  --elementColorBackground: #794bb0;
+  --borderWidth: 0.2vw;
+  --borderRadius: 1vw;
 }
 
 body {
@@ -13,15 +15,15 @@ body {
   flex-direction: column;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1 rem;
-  background-color: var(--backgroundcolor)
+  background-color: var(--backgroundcolor);
 }
 
 #nav {
-  display:inline-block;
+  display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--elementColor);
+  background-color: var(--elementColorHighlight);
   width: 98vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
   /* padding: 50px; */
@@ -29,28 +31,34 @@ body {
 }
 
 .navText {
-  padding: 1rem;
+  color: var(--textColor);
+  background-color: var(--elementColorBackground);
+  border-radius: var(--borderRadius);
+  border: var(--borderWidth) solid rgb(0, 0, 0);
+  padding: .5rem;
+  margin-right:1em;
+  cursor: pointer;
 }
 
 #violet {
-  color: #FF9AEC;
-  background-color: #51456e;
+  color: var(--textColor);
+  background-color: var(--elementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
-  padding: 1rem
+  padding: .5rem;
+  margin-right: auto;
+  margin-left: 1em;
 }
 
-.main {
-  color: var(--textColor);
+.posts {
   max-width: 45ch;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2VW;
-  border: var(--borderWidth) solid var(--elementColor)
+  margin: 2vw;
+  border: var(--borderWidth) solid var(--elementColorHighlight);
 }
-
 
 .bottomBar {
   position: relative;
@@ -59,9 +67,11 @@ body {
   color: rgb(255, 166, 0);
 }
 
-.navText {
+
+.title {
+  color: var(--titleColor);
+}
+
+.paragraph {
   color: var(--textColor);
-  background-color: #888888;
-  border-radius: var(--borderRadius);
-  padding: 1vw
 }
