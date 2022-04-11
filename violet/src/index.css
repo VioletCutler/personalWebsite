@@ -1,0 +1,67 @@
+:root {
+  --backgroundcolor: #15341c;
+  --borderWidth: .2vw;
+  --elementColor: #0fa872;
+  --textColor: #cad7cd;
+  --borderRadius: 1vw
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1 rem;
+  background-color: var(--backgroundcolor)
+}
+
+#nav {
+  display:inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--elementColor);
+  width: 98vw;
+  border: var(--borderWidth) solid rgb(0, 0, 0);
+  /* padding: 50px; */
+  /* margin: 20px; */
+}
+
+.navText {
+  padding: 1rem;
+}
+
+#violet {
+  color: #FF9AEC;
+  background-color: #51456e;
+  border-radius: var(--borderRadius);
+  border: var(--borderWidth) solid rgb(0, 0, 0);
+  padding: 1rem
+}
+
+.main {
+  color: var(--textColor);
+  max-width: 45ch;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin: 2VW;
+  border: var(--borderWidth) solid var(--elementColor)
+}
+
+
+.bottomBar {
+  position: relative;
+  bottom: 0;
+  right: 1vw;
+  color: rgb(255, 166, 0);
+}
+
+.navText {
+  color: var(--textColor);
+  background-color: #888888;
+  border-radius: var(--borderRadius);
+  padding: 1vw
+}
