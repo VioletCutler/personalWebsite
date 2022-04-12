@@ -1,4 +1,5 @@
 import Navbar from "./NavBar/Navbar";
+import ThemeBar from "./NavBar/ThemeBar";
 import HomePage from "./HomePage";
 import About from "./About"
 import CSSSandbox from "./CSSSandbox";
@@ -8,15 +9,17 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* <Header /> */}
         <Navbar />
-        <main>
+   
+        <main className="main">
           <Routes>
             <Route exact path="/" element={ <HomePage/>} />
             <Route exact path='/about' element={ <About/>} />
             <Route exact path='/CSS' element={ <CSSSandbox/>} />
           </Routes>
         </main>
-
+        <ThemeBar />
         <div></div>
       </div>
     </Router>

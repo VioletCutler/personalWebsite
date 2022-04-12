@@ -24,8 +24,7 @@ function Navbar() {
   }
 
   return (
-    <div>
-      <nav id="nav">
+      <nav>
         <h3
           id="violet"
           style={{cursor: 'pointer'}}
@@ -81,7 +80,6 @@ function Navbar() {
           VIDEOS
         </h3>
       </nav>
-    </div>
   );
 }
 

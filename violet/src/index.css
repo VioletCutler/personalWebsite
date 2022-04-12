@@ -1,13 +1,41 @@
-
 :root {
-  --titleColor: #f7f9de;
-  --textColor: #dfe5a4;
-  --backgroundcolor: #548d05;
-  --elementColorHighlight: #e7c691;
-  --elementColorBackground: #cc6cff;
-  --navTextColor: #fcfddf;
   --borderWidth: 0.2vw;
   --borderRadius: 1vw;
+
+  --selectedTitleColor: var(--ThemeOneTitleColor);
+  --selectedTextColor: var(--ThemeOneTextColor);
+  --selectedBackgroundColor: var(--ThemeOneBackgroundColor);
+  --selectedElementColorHighlight: var(--ThemeOneElementColorHighlight);
+  --selectedElementColorBackground: var(--ThemeOneElementColorBackground);
+  --selectedNavTextColor: var(--ThemeOneNavTextColor);
+  --selectedBorderColor: var(--ThemeOneBorderColor);
+
+  /* Theme One */
+  --ThemeOneTitleColor: #e6c9df;
+  --ThemeOneTextColor: #edd6cb;
+  --ThemeOneBackgroundColor: #4b9fa1;
+  --ThemeOneElementColorHighlight: #e3ba5a;
+  --ThemeOneElementColorBackground: #5ca31e;
+  --ThemeOneNavTextColor: #f1f0f0;
+  --ThemeOneBorderColor: #c9a793;
+
+  /* Theme Two */
+  --ThemeTwoTitleColor: #dc9149;
+  --ThemeTwoTextColor: #a8c580;
+  --ThemeTwoBackgroundColor: #1d5d7a;
+  --ThemeTwoElementColorHighlight: #ab4e44;
+  --ThemeTwoElementColorBackground: #c73033;
+  --ThemeTwoNavTextColor: #fff3ec;
+  --ThemeTwoBorderColor: #c9a793;
+
+  /* Theme Three */
+  --ThemeThreeTitleColor: #f7f9de;
+  --ThemeThreeTextColor: #dfe5a4;
+  --ThemeThreeBackgroundColor: #548d05;
+  --ThemeThreeElementColorHighlight: #e7c691;
+  --ThemeThreeElementColorBackground: #cc6cff;
+  --ThemeTwoNavTextColor: #fff3ec;
+  --ThemeTwoBorderColor: #c9a793;
 }
 
 body {
@@ -17,24 +45,55 @@ body {
   flex-direction: column;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1 rem;
-  background-color: var(--backgroundcolor);
+  background-color: var(--selectedBackgroundColor);
+  margin-top: 0;
 }
 
-#nav {
+main {
+  z-index: auto;
+}
+
+App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
   display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--elementColorHighlight);
-  width: 98vw;
+  align-self: flex-start;
+  background-color: var(--selectedElementColorHighlight);
+  width: 100vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
   /* padding: 50px; */
   /* margin: 20px; */
 }
 
+#themeBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: flex-start;
+  background-color: var(--selectedElementColorHighlight);
+  width: 100vw;
+  border: var(--borderWidth) solid rgb(0, 0, 0);
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  flex-shrink: 0;
+}
+
 .navText {
-  color: var(--navTextColor);
-  background-color: var(--elementColorBackground);
+  color: var(--selectedNavTextColor);
+  background-color: var(--selectedElementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
   padding: 0.5rem;
@@ -43,8 +102,8 @@ body {
 }
 
 #violet {
-  color: var(--navTextColor)
-;  background-color: var(--elementColorBackground);
+  color: var(--selectedNavTextColor);
+  background-color: var(--selectedElementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
   padding: 0.5rem;
@@ -59,7 +118,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 2vw;
-  border: var(--borderWidth) solid var(--elementColorHighlight);
+  border: var(--borderWidth) solid var(--selectedBorderColor);
+  z-index: auto;
 }
 
 .bottomBar {
@@ -70,18 +130,40 @@ body {
 }
 
 .title {
-  color: var(--titleColor);
+  color: var(--selectedTitleColor);
 }
 
 .paragraph {
-  color: var(--textColor);
+  color: var(--selectedTextColor);
 }
 
-.light-theme {
-  --primary-color: #007bff;
-  --disabled-color: #6c757d;
+#buttons {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
 }
-.dark-theme {
-  --primary-color: #000000;
-  --disabled-color: #4a4a4b;
+
+#themeOneBtn {
+  color: var(--ThemeOneElementColorHighlight);
+  background-color: var(--ThemeOneBackgroundColor);
+}
+
+#themeTwoBtn {
+  color: var(--ThemeTwoElementColorHighlight);
+  background-color: var(--ThemeTwoBackgroundColor);
+}
+
+#themeThreeBtn {
+  color: var(--ThemeThreeElementColorHighlight);
+  background-color: var(--ThemeThreeBackgroundColor);
+}
+
+.themeButtons {
+  font-size: 5rem;
+  padding: 0.5rem;
+  min-width: 5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  outline: unset;
+  transition: background-color 0.3s ease, box-shadow 0.7s ease;
 }
