@@ -7,7 +7,7 @@ function ThemeBar() {
             <h1 id="chooseColorTheme">Choose a color theme</h1>
         <button id='themeOneBtn' className="themeButtons" onClick={() => {
             setTheme('ThemeOne')
-            // setButtonTheme('neutral')
+            setButtonTheme('neutral')
         }}>1</button>
             <button id='themeTwoBtn' className="themeButtons" onClick={() => {
             setTheme('ThemeTwo')

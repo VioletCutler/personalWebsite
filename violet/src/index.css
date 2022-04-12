@@ -2,13 +2,13 @@
   --borderWidth: 0.2vw;
   --borderRadius: 1vw;
 
-  --selectedTitleColor: var(--ThemeOneTitleColor);
-  --selectedTextColor: var(--ThemeOneTextColor);
-  --selectedBackgroundColor: var(--ThemeOneBackgroundColor);
-  --selectedElementColorHighlight: var(--ThemeOneElementColorHighlight);
-  --selectedElementColorBackground: var(--ThemeOneElementColorBackground);
-  --selectedNavTextColor: var(--ThemeOneNavTextColor);
-  --selectedBorderColor: var(--ThemeOneBorderColor);
+  --selectedThemeTitleColor: var(--ThemeOneTitleColor);
+  --selectedThemeTextColor: var(--ThemeOneTextColor);
+  --selectedThemeBackgroundColor: var(--ThemeOneBackgroundColor);
+  --selectedThemeElementColorHighlight: var(--ThemeOneElementColorHighlight);
+  --selectedThemeElementColorBackground: var(--ThemeOneElementColorBackground);
+  --selectedThemeNavTextColor: var(--ThemeOneNavTextColor);
+  --selectedThemeBorderColor: var(--ThemeOneBorderColor);
 
   /* Theme One */
   --ThemeOneTitleColor: #e6c9df;
@@ -61,14 +61,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--selectedBackgroundColor);
+  background-color: var(--selectedThemeBackgroundColor);
 }
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--selectedElementColorHighlight);
+  background-color: var(--selectedThemeElementColorHighlight);
   width: 100vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
   margin-top: 0;
@@ -81,7 +81,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-self: flex-start;
-  background-color: var(--selectedElementColorHighlight);
+  background-color: var(--selectedThemeElementColorHighlight);
   width: 100vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
   margin-top: auto;
@@ -93,7 +93,7 @@ nav {
 
 .navText {
   color: var(--selectedNavTextColor);
-  background-color: var(--selectedElementColorBackground);
+  background-color: var(--selectedThemeElementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
   padding: 0.5rem;
@@ -103,7 +103,7 @@ nav {
 
 #violet {
   color: var(--selectedNavTextColor);
-  background-color: var(--selectedElementColorBackground);
+  background-color: var(--selectedThemeElementColorBackground);
   border-radius: var(--borderRadius);
   border: var(--borderWidth) solid rgb(0, 0, 0);
   padding: 0.5rem;
@@ -118,7 +118,7 @@ nav {
   align-items: center;
   justify-content: center;
   margin: 2vw;
-  border: var(--borderWidth) solid var(--selectedBorderColor);
+  border: var(--borderWidth) solid var(--selectedThemeBorderColor);
   z-index: auto;
 }
 
@@ -130,11 +130,11 @@ nav {
 }
 
 .title {
-  color: var(--selectedTitleColor);
+  color: var(--selectedThemeTitleColor);
 }
 
 .paragraph {
-  color: var(--selectedTextColor);
+  color: var(--selectedThemeTextColor);
 }
 
 /* #themeOneBtn {
