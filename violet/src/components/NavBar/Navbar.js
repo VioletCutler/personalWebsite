@@ -12,14 +12,14 @@ function Navbar() {
   })
   
   function mouseEnterHandler(event) {
-    event.target.style.color = "#EE6A1F";
+    // event.target.style.color = "#EE6A1F";
   }
 
   function mouseLeaveHandler(event) {
     if (event.target.id === "violet") {
-      event.target.style.color = "#FF9AEC";
+      // event.target.style.color = "#FF9AEC";
     } else {
-      event.target.style.color = "white";
+      // event.target.style.color = "white";
     }
   }
 

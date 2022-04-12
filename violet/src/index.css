@@ -20,13 +20,13 @@
   --ThemeOneBorderColor: #c9a793;
 
   /* Theme Two */
-  --ThemeTwoTitleColor: #dc9149;
-  --ThemeTwoTextColor: #a8c580;
-  --ThemeTwoBackgroundColor: #1d5d7a;
-  --ThemeTwoElementColorHighlight: #ab4e44;
-  --ThemeTwoElementColorBackground: #c73033;
-  --ThemeTwoNavTextColor: #fff3ec;
-  --ThemeTwoBorderColor: #c9a793;
+  --ThemeTwoTitleColor: #2e523f;
+  --ThemeTwoTextColor: #11253d;
+  --ThemeTwoBackgroundColor: #7DC4C5;
+  --ThemeTwoElementColorHighlight: #D7F0EA;
+  --ThemeTwoElementColorBackground: #bbebbb;
+  --ThemeTwoNavTextColor: #353b3a;
+  --ThemeTwoBorderColor: #1b3350;
 
   /* Theme Three */
   --ThemeThreeTitleColor: #f7f9de;
@@ -34,19 +34,24 @@
   --ThemeThreeBackgroundColor: #548d05;
   --ThemeThreeElementColorHighlight: #e7c691;
   --ThemeThreeElementColorBackground: #cc6cff;
-  --ThemeTwoNavTextColor: #fff3ec;
-  --ThemeTwoBorderColor: #c9a793;
+  --ThemeThreeNavTextColor: #fff3ec;
+  --ThemeThreeBorderColor: #c9a793;
 }
 
 body {
+  top: 0;
+  margin: 0;
+  min-height: 100%;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1 rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1 rem;
+
   background-color: var(--selectedBackgroundColor);
-  margin-top: 0;
 }
 
 main {
@@ -135,12 +140,6 @@ nav {
 
 .paragraph {
   color: var(--selectedTextColor);
-}
-
-#buttons {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
 }
 
 #themeOneBtn {
