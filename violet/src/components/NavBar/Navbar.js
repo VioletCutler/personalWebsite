@@ -7,8 +7,6 @@ function Navbar() {
 
   useEffect(() => {
     const selectedCSSProps = Array.from(document.styleSheets)
-    console.log('selectedCSSProps', selectedCSSProps)
-    console.log('document.',document.documentElement.style)
   })
   
   function mouseEnterHandler(event) {

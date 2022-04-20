@@ -1,37 +1,20 @@
 function HomePage() {
   return (
-    <div>
-      <div className="posts">
-        <h1 className="title">Hello World</h1>
-        <p className='paragraph'>
-          My very first website. I hope to make something interesting,
-          accessible, and exciting
-        </p>
-        <p className="paragraph">lorem</p>
-      </div>
-      <div className="posts">
-        <h1 className="title">What a journey</h1>
-        <p className='paragraph'>I can't believe that this has finally come to the point it has</p>
-      </div>
-      <div className="posts">
-        <h1 className="title">What a journey</h1>
-        <p className='paragraph'>I can't believe that this has finally come to the point it has</p>
-      </div>
-      <div className="posts">
-        <h1 className="title">Hello World</h1>
-        <p className='paragraph'>
-          My very first website. I hope to make something interesting,
-          accessible, and exciting
-        </p>
-        <p className="paragraph">lorem</p>
-      </div>
-      <div className="posts">
-        <h1 className="title">What a journey</h1>
-        <p className='paragraph'>I can't believe that this has finally come to the point it has</p>
-      </div>
-      <div className="posts">
-        <h1 className="title">What a journey</h1>
-        <p className='paragraph'>I can't believe that this has finally come to the point it has</p>
+    <div className="homePage">
+      <img
+        id="homePagePlaceHolder"
+        src="Violet.png"
+        alt="A smiling white woman with long brown hair. She is wearing a green top and has red lipstick."
+      ></img>
+      <div className="homePagePosts">
+        <div className="posts">
+          <h1 className="title">Hello World</h1>
+          <p className="paragraph">
+            Welcome to my very first website. I honestly never thought I would
+            be here. <br /> <br />I have been an artist and performer for over a
+            decade. I 
+          </p>
+        </div>
       </div>
     </div>
   );

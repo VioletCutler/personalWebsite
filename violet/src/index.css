@@ -7,49 +7,85 @@
   --selectedThemeBackgroundColor: var(--ThemeOneBackgroundColor);
   --selectedThemeElementColorHighlight: var(--ThemeOneElementColorHighlight);
   --selectedThemeElementColorBackground: var(--ThemeOneElementColorBackground);
+  --selectedThemePostBackground: var(--ThemeOnePostBackground);
   --selectedThemeNavTextColor: var(--ThemeOneNavTextColor);
   --selectedThemeBorderColor: var(--ThemeOneBorderColor);
 
   /* Theme One */
-  --ThemeOneTitleColor: #e6c9df;
-  --ThemeOneTextColor: #edd6cb;
+  --ThemeOneTitleColor: #000000;
+  --ThemeOneTextColor: #000000;
   --ThemeOneBackgroundColor: #4b9fa1;
   --ThemeOneElementColorHighlight: #e3ba5a;
-  --ThemeOneElementColorBackground: #5ca31e;
+  --ThemeOneElementColorBackground: #c88fd5;
   --ThemeOneNavTextColor: #f1f0f0;
-  --ThemeOneBorderColor: #c9a793;
+  --ThemeOneBorderColor: #150e20;
+  --ThemeOnePostBackground: #c88fd5;
+  --ThemeOneButtonText: #edd6cb;
+  --ThemeOneButtonBackground: #e6c9df;
 
   /* Theme Two */
   --ThemeTwoTitleColor: #2f2e52;
   --ThemeTwoTextColor: #11253d;
-  --ThemeTwoBackgroundColor: #7DC4C5;
-  --ThemeTwoElementColorHighlight: #D7F0EA;
+  --ThemeTwoBackgroundColor: #7dc4c5;
+  --ThemeTwoElementColorHighlight: #d7f0ea;
   --ThemeTwoElementColorBackground: #bbebbb;
   --ThemeTwoNavTextColor: #353b3a;
   --ThemeTwoBorderColor: #1b3350;
+  --ThemeTwoPostBackground: white;
+  --ThemeTwoButtonText: #edd6cb;
+  --ThemeTwoButtonBackground: #e6c9df;
 
   /* Theme Three */
-  --ThemeThreeTitleColor: #f7f9de;
-  --ThemeThreeTextColor: #dfe5a4;
-  --ThemeThreeBackgroundColor: #548d05;
-  --ThemeThreeElementColorHighlight: #e7c691;
-  --ThemeThreeElementColorBackground: #cc6cff;
+  --ThemeThreeTitleColor: #383332;
+  --ThemeThreeTextColor: #383332;
+  --ThemeThreeBackgroundColor: #872B35;
+  --ThemeThreeElementColorHighlight: #e6be6e;
+  --ThemeThreeElementColorBackground: #e4c4ba;
   --ThemeThreeNavTextColor: #fff3ec;
-  --ThemeThreeBorderColor: #c9a793;
+  --ThemeThreeBorderColor: #1e3202;
+  --ThemeThreePostBackground: #e4c4ba;
+  --ThemeThreeButtonText: #f7f9de;
+  --ThemeThreeButtonBackground: #dfe5a4;
 
-  --selectedButtonText: var(--neutralText);
-  --selectedButtonBackground: (var--neutralBackground);
+  /* Theme Four */
+  --ThemeFourTitleColor: #1d1d1d;
+  --ThemeFourTextColor: #00061c;
+  --ThemeFourBackgroundColor: rgb(255, 255, 255);
+  --ThemeFourElementColorHighlight: #7d8499;
+  --ThemeFourElementColorBackground: #a6b0ce;
+  --ThemeFourNavTextColor: #E9E9EA;
+  --ThemeFourBorderColor: #292C36;
+  --ThemeFourPostBackground: #7d8499;
+  --ThemeFourButtonText: #f7f9de;
+  --ThemeFourButtonBackground: #dfe5a4;
+
+    /* Theme Five */
+    --ThemeFiveTitleColor: #00223e;
+    --ThemeFiveTextColor: #003152;
+    --ThemeFiveBackgroundColor: #C37272;
+    --ThemeFiveElementColorHighlight: #E2B7B7;
+    --ThemeFiveElementColorBackground: #D39696;
+    --ThemeFiveNavTextColor: #E9E9EA;
+    --ThemeFiveBorderColor: #00223e;
+    --ThemeFivePostBackground: #D39696;
+    --ThemeFiveButtonText: #f7f9de;
+    --ThemeFiveButtonBackground: #dfe5a4;
+
+
+    /* Theme Selection Bar */
+    --themeSelectionButtonText:
+  --selectedThemeButtonText: var(--neutralText);
+  --selectedThemeButtonBackground: var(--neutralBackground);
+
+  --hoveredButtonText: var(--blueText);
+  --hoveredButtonBackground: var(--blueBackground);
 
   --neutralText: black;
   --neutralBackground: white;
 
   --blueText: blue;
   --blueBackground: teal;
-
 }
-
-
-
 
 * {
   margin: 0;
@@ -64,31 +100,37 @@ body {
   background-color: var(--selectedThemeBackgroundColor);
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: var(--selectedThemeElementColorHighlight);
-  width: 100vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
-  margin-top: 0;
   position: sticky;
-  padding: .5rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin:0;
 }
 
 #themeBar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-self: flex-start;
   background-color: var(--selectedThemeElementColorHighlight);
-  width: 100vw;
   border: var(--borderWidth) solid rgb(0, 0, 0);
-  margin-top: auto;
+  /* margin-top: auto; */
   position: sticky;
   bottom: 0;
   left: 0;
-  flex-shrink: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin:0;
 }
 
 .navText {
@@ -111,52 +153,67 @@ nav {
   margin-left: 1em;
 }
 
+.homePage {
+  display:flex;
+  flex-direction: row;
+
+}
+
+#homePagePlaceHolder {
+  max-width: 45ch;
+  max-height: 45ch;
+  margin: 1rem;
+  margin-left: 5rem;
+}
+
+.homePagePosts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .posts {
+  background-color: var(--selectedThemePostBackground);
   max-width: 45ch;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2vw;
+  margin: 1rem;
   border: var(--borderWidth) solid var(--selectedThemeBorderColor);
   z-index: auto;
 }
 
-.bottomBar {
-  position: relative;
-  bottom: 0;
-  right: 1vw;
-  color: rgb(255, 166, 0);
-}
-
 .title {
+  align-self: flex-start;
+  font-size:2.5rem;
+  margin: 1rem;
   color: var(--selectedThemeTitleColor);
 }
 
 .paragraph {
+  font-size: 1.5rem;
+  margin: 1rem;
   color: var(--selectedThemeTextColor);
 }
 
-/* #themeOneBtn {
-  color: var(--ThemeOneElementColorHighlight);
-  background-color: var(--ThemeOneBackgroundColor);
+#themeOneBtn {
+  color: var(--neutralText);
+  background-color: var(--neutralBackground);
 }
 
 #themeTwoBtn {
-  color: var(--ThemeTwoElementColorHighlight);
-  background-color: var(--ThemeTwoBackgroundColor);
+  color: var(--neutralText);
+  background-color: var(--neutralBackground);
 }
 
 #themeThreeBtn {
-  color: var(--ThemeThreeElementColorHighlight);
-  background-color: var(--ThemeThreeBackgroundColor);
-} */
+  color: var(--neutralText);
+  background-color: var(--neutralBackground);
+}
 
 .themeButtons {
-  color: var(--selectedButtonText);
-  background-color: var(--selectedButtonBackground);
-  font-size: 5rem;
-  padding: 0.5rem;
+  bottom: 0;
+  margin: .5em;
+  font-size: 1rem;
   min-width: 5rem;
   border-radius: 0.5rem;
   position: relative;
